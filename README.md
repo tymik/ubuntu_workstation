@@ -11,7 +11,7 @@ By that time many other similar roles were published already and I owe everyone 
 I hope I haven't missed anyone.
 
 So credits and thanks to:
-* Patrick Bulteel: https://github.com/pbulteel/ansible-laptop
+* [Patrick Bulteel](https://github.com/pbulteel/ansible-laptop)
 
 
 Requirements
