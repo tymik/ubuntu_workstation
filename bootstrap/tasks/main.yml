@@ -4,3 +4,4 @@
 - include: snap.yml
 - include: mega.yml
 - include: git.yml
+- include: vscode.yml

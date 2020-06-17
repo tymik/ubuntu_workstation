@@ -1,0 +1,5 @@
+---
+# vscode related stuff
+- name: Install Settings Sync extension
+  shell: code --install-extension Shan.code-settings-sync
+  become: false
