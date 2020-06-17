@@ -5,3 +5,4 @@
 - include: mega.yml
 - include: git.yml
 - include: vscode.yml
+- include: ansible.yml

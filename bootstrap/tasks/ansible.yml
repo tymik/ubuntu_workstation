@@ -1,0 +1,10 @@
+---
+# This is a must have which I really, really need
+- name: Install all commonly used desktop packages from apt
+  apt:
+    name: 
+      - ansible-doc
+      - ansible-lint
+    state: present
+    update_cache: yes
+    autoclean: yes
