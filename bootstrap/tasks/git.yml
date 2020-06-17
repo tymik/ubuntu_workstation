@@ -1,0 +1,32 @@
+---
+# Configuration of git
+- git_config:
+    name: user.name
+    scope: global
+    value: "{{ git_user_name }}"
+  become: false
+
+- git_config:
+    name: user.email
+    scope: global
+    value: "{{ git_user_email }}"
+  become: false
+
+- git_config:
+    name: core.editor
+    scope: global
+    value: "{{ git_editor }}"
+  become: false
+
+- git_config:
+    name: user.signingkey
+    scope: global
+    value: "{{ git_user_signkey }}"
+  become: false
+
+- git_config:
+    name: commit.gpgsign
+    scope: global
+    value: true
+  become: false
+

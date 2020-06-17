@@ -1,0 +1,15 @@
+---
+- name: Install regular snap packages
+  snap:
+    name:
+      - telegram-desktop
+      - zoom-client
+
+- name: Install snap packages requiring --classic
+  snap:
+    name:
+      - code
+      - slack
+      - skype
+      - spotify
+    classic: yes

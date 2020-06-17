@@ -1,0 +1,26 @@
+---
+# This is a must have which I really, really need
+- name: Install all commonly used desktop packages from apt
+  apt:
+    name: 
+      - dconf-cli
+      - git
+      - keepassxc
+      - python3-pip
+      - screen
+      - vim
+    state: present
+    update_cache: yes
+    autoclean: yes
+
+- name: Update psutil with pip
+  pip:
+    name: psutil
+    state: latest
+
+- name: Swap escape with caps lock
+  dconf:
+    key: "/org/gnome/desktop/input-sources/xkb-options"
+    value: "['caps:swapescape']"
+    state: present
+  become: false

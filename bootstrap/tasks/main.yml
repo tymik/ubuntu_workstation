@@ -1,0 +1,6 @@
+---
+# tasks file for ubuntu-workstaion
+- include: basics.yml
+- include: snap.yml
+- include: mega.yml
+- include: git.yml

@@ -1,0 +1,6 @@
+---
+# vars for git
+git_editor: vim
+git_user_name: Jan Tymiński
+git_user_email: tymikk@gmail.com
+git_user_signkey: D3AE4A8C81E481EEB301781BA1F5FDDBA4B96FE4
