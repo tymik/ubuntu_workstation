@@ -1,0 +1,6 @@
+.history/
+**/*.swp
+**/.DS*
+**/.DS_Store
+!README*
+local.yml
