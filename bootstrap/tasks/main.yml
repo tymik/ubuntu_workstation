@@ -7,6 +7,7 @@
 - include: vscode.yml
 - include: snap.yml
 - include: ansible.yml
+- include: microsoft.yml
 
 #TODO:
 # * Chrome
@@ -20,7 +21,6 @@
 # * terraform + tfswitch
 # * docker
 # * kubectl
-# * azure cli
 # * flashplugin
 # * gksu
 # * lm-sensors

@@ -3,6 +3,11 @@
 - name: Install all commonly used desktop packages from apt
   apt:
     name: 
+      - ca-certificates
+      - curl
+      - apt-transport-https
+      - lsb-release
+      - gnupg
       - dconf-cli
       - git
       - keepassxc
