@@ -1,0 +1,17 @@
+---
+# installing keybase from official repo
+# - name: "Add Repo: keybase"
+#   apt_repository:
+#     repo: https://prerelease.keybase.io/keybase_amd64.deb
+#     state: present
+#     filename: 'keybase'
+#   ignore_errors: yes
+
+- name: "Install keybase"
+  apt: 
+    deb: https://prerelease.keybase.io/keybase_amd64.deb
+    # name: keybase
+    state: present 
+    update_cache: yes
+  ignore_errors: yes
+

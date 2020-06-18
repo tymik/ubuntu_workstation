@@ -1,8 +1,9 @@
 ---
 # tasks file for ubuntu-workstaion
 - include: basics.yml
-- include: snap.yml
 - include: mega.yml
+- include: keybase.yml
 - include: git.yml
 - include: vscode.yml
+- include: snap.yml
 - include: ansible.yml
