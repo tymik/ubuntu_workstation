@@ -1,7 +1,17 @@
-Role Name
-=========
+ubuntu_workstation
+==================
 
-A brief description of the role goes here.
+This is my idea on how to bootstrap an Ubuntu workstation ready to work as a devops, sysadmin and (at least partiall) developer.
+It is tailored to meet my specific needs, but it is a verbose one.
+Here you can find packages and configuration that I assume I may need for working purposes.
+This also includes the most common messengers that you may need in work.
+
+From clouds I will start with AWS and Azure CLIs, Google stuff may become available in future.
+
+I may come up with entertainment related packages too in future, but this is not the main goal.
+Don't expect steam / playonlinux / lutris and/or others here soon.
+
+Staring / watching the project will motivate me to put more efforts into this playbook.
 
 Credits
 -------
@@ -13,30 +23,30 @@ I hope I haven't missed anyone.
 So credits and thanks to:
 * [Patrick Bulteel](https://github.com/pbulteel/ansible-laptop)
 
-
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Requirements are simple - everything has to be in latest version - I will not keep it backward compatible.
 
-Role Variables
---------------
+How to use
+----------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+You need to review and tune the variables to fit your needs.
+Don't blame me if something is added, removed or configured that you did not want to happen.
+
+To start bootstraping just run:
+`ansible-playbook workstation.yml -K`
+Remember you have to meet dependencies - it may work if they are unmet, but I don't guarantee that.
+I also recommend checking the playbook with dry run first:
+`ansible-playbook workstation.yml -K --check`
+Although it will fail on some steps now as no tests are prepared - they may be introduced in future or never.
+
+The idea is to bootstrap current instance and playbook is prepared in such way - see `ansible.cfg` and `workstation.yml` for details.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+To start using this playbook you need to have latest Ubuntu with latest Ansible installed
 
 License
 -------
@@ -46,4 +56,4 @@ MIT
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+You can contact me on telegram: https://t.me/tymikk
