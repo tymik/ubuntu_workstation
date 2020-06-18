@@ -7,3 +7,50 @@
 - include: vscode.yml
 - include: snap.yml
 - include: ansible.yml
+
+#TODO:
+# * Chrome
+# * anydesk
+# * awscli
+# * aptitude
+# * flameshot - and put it into prtscr key
+# * ffmpeg and other codecs
+# * package updates (apt, snap, fwupdate)
+# * gimp
+# * terraform + tfswitch
+# * docker
+# * kubectl
+# * azure cli
+# * flashplugin
+# * gksu
+# * lm-sensors
+# * hddtemp
+# * dotfiles (need own fork)
+# * mplayer
+# * ncdu
+# * net-tools
+# * nautilus-admin                   
+# * nautilus-data                    
+# * nautilus-extension-brasero       
+# * nautilus-extension-gnome-terminal
+# * nautilus-sendto                  
+# * nautilus-share                   
+# * nautilus-wipe
+# * openvpn
+# * openssh-server
+# * openjdk
+# * pwgen
+# * powertop
+# * ensure ansible uses python3
+# * scrot / shutter - to be verified, both of them
+# * secure-delete
+# * smartmontools
+# * synaptic
+# * aptitude
+# * teamviewer
+# * wireshark / tshark
+# * ubuntu-restricted-extras
+# * virtualbox
+# * vlc (verify if needed)
+# * wipe
+# * check packages that you might want to remove from basic ubuntu installation
