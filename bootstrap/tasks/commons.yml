@@ -1,0 +1,25 @@
+---
+# This is a must have which I really, really need
+- name: Install all commonly used desktop packages from apt
+  apt:
+    name: 
+      - aptitude
+      - hddtemp
+      - gimp
+      - lm-sensors
+      - ncdu
+      - net-tools
+      - openvpn
+      - openssh-server
+      - powertop
+      - pwgen
+      - secure-delete
+      - smartmontools
+      - synaptic
+      - tshark
+      - ubuntu-restricted-extras
+      - wipe
+      - wireshark
+    state: present
+    update_cache: yes
+    autoclean: yes
