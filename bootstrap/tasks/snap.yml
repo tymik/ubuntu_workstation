@@ -2,6 +2,7 @@
 - name: Install regular snap packages
   snap:
     name:
+      - discord
       - telegram-desktop
       - zoom-client
 

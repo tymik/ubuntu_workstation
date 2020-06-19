@@ -10,10 +10,9 @@
 - include: microsoft.yml
 - include: commons.yml
 - include: chrome.yml
+- include: anydesk.yml
 
 #TODO:
-# * discord
-# * anydesk
 # * awscli
 # * ffmpeg and other codecs
 # * package updates (apt, snap, fwupdate)
