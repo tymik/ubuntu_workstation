@@ -12,13 +12,13 @@
 - include: chrome.yml
 - include: anydesk.yml
 
-#TODO:
-# * awscli
-# * ffmpeg and other codecs
+# TODO:
+# * awscli v2 - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
 # * package updates (apt, snap, fwupdate)
-# * terraform + tfswitch
 # * docker
+# * terraform + tfswitch
 # * kubectl
+# * ffmpeg and other codecs
 # * flashplugin
 # * gksu - was not found in repo
 # * dotfiles (need own fork)
