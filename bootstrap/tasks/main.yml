@@ -9,9 +9,9 @@
 - include: ansible.yml
 - include: microsoft.yml
 - include: commons.yml
+- include: chrome.yml
 
 #TODO:
-# * Chrome
 # * discord
 # * anydesk
 # * awscli
