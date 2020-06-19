@@ -14,7 +14,6 @@
 # * Chrome
 # * anydesk
 # * awscli
-# * flameshot - and put it into prtscr key
 # * ffmpeg and other codecs
 # * package updates (apt, snap, fwupdate)
 # * terraform + tfswitch
