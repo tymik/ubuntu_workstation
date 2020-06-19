@@ -9,6 +9,7 @@
       - lsb-release
       - gnupg
       - dconf-cli
+      - dconf-editor
       - git
       - keepassxc
       - python3-pip
