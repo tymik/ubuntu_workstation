@@ -24,20 +24,13 @@
 # * gksu - was not found in repo
 # * dotfiles (need own fork)
 # * mplayer
-# * net-tools
 # * nautilus-admin                   
-# * nautilus-data                    
 # * nautilus-extension-brasero       
-# * nautilus-extension-gnome-terminal
-# * nautilus-sendto                  
-# * nautilus-share                   
 # * nautilus-wipe
 # * openjdk
-# * ensure ansible uses python3
-# * scrot / shutter - to be verified, both of them
 # * teamviewer
 # * virtualbox
-# * vlc (verify if needed)
+# * vlc (verify if needed)s
 # * check packages that you might want to remove from basic ubuntu installation
 # * Google CLI
 # * add more ubuntu repos
