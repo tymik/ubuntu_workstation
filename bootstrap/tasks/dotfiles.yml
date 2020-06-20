@@ -1,0 +1,8 @@
+---
+# set up dotfiles
+- name: git clone dotfiles
+  git:
+    repo: ssh://git@github.com/tymik/dotfiles.git
+    dest: '{{ ansible_env.HOME }}/dotfiles'
+  become: false
+  # become_user: "{{ ansible_user }}"

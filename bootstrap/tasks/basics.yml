@@ -19,11 +19,13 @@
     update_cache: yes
     cache_valid_time: 3600
     autoclean: yes
+  become: true
 
 - name: Update psutil with pip
   pip:
     name: psutil
     state: latest
+  become: true
 
 - name: Swap escape with caps lock
   dconf:

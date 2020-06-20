@@ -1,9 +1,10 @@
 ---
-# Credits to pbulteel
+# MS repo, azure cli, ms teams
 - name: "Add Microsoft key"
   apt_key:
     url: https://packages.microsoft.com/keys/microsoft.asc
     state: present
+  become: true
   ignore_errors: yes
 
 - name: "Add Teams Repo"
@@ -11,6 +12,7 @@
     repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
     state: present
     filename: 'ms-teams'
+  become: true
   ignore_errors: yes
 
 - name: "Add Azure CLI Repo"
@@ -18,6 +20,7 @@
     repo: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ "{{ ansible_distribution_release }}" main
     state: present
     filename: 'azure-cli'
+  become: true
   ignore_errors: yes
 
 - name: "Install Microsoft provided packages"
@@ -27,5 +30,6 @@
     - teams
     state: present 
     update_cache: yes
+  become: true
   ignore_errors: yes
 

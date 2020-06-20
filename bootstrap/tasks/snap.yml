@@ -5,6 +5,7 @@
       - discord
       - telegram-desktop
       - zoom-client
+  become: true
 
 - name: Install snap packages requiring --classic
   snap:
@@ -14,3 +15,4 @@
       - skype
       - spotify
     classic: yes
+  become: true

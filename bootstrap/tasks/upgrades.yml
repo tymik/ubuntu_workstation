@@ -8,12 +8,14 @@
     cache_valid_time: 3600
     autoremove: yes
     autoclean: yes
+  become: true
 
 # https://github.com/ansible/ansible/issues/62492
 # snap module does not natively support that now
 # needs to be developed to snap module
 - name: snaps update (shell method)
   shell: snap refresh
+  become: true
 
 # Please note that this operation can be destructive
 # I use --force because I want this to run on battery too
@@ -22,3 +24,4 @@
 # or you need to suspend/hibernate on low battery...
 - name: firmware update
   shell: fwupdmgr update -y --force
+  become: true
