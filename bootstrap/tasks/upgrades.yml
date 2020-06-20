@@ -1,0 +1,24 @@
+---
+# This is a must have which I really, really need
+- name: apt dist-upgrade, autoremove and autoclean
+  apt:
+    upgrade: dist
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+    autoremove: yes
+    autoclean: yes
+
+# https://github.com/ansible/ansible/issues/62492
+# snap module does not natively support that now
+# needs to be developed to snap module
+- name: snaps update (shell method)
+  shell: snap refresh
+
+# Please note that this operation can be destructive
+# I use --force because I want this to run on battery too
+# But I ensure I have enough power to finish this process.
+# Firmware upgrade can be destructive if your laptop shuts off
+# or you need to suspend/hibernate on low battery...
+- name: firmware update
+  shell: fwupdmgr update -y --force

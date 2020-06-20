@@ -11,6 +11,7 @@
 - include: commons.yml
 - include: chrome.yml
 - include: anydesk.yml
+- include: upgrades.yml
 
 # TODO:
 # * awscli v2 - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
