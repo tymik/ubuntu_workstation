@@ -1,0 +1,16 @@
+---
+# Kubernetes latest
+# 2020-06-21:
+# In general instead of using this I prefer to use docker containers
+# with kubectl and helm and I advise you to do the same unless you
+# really need to install that.
+# and I did not test commands below, so they may work or may need some tuning
+- name: Install kubectl (shell method)
+  shell:
+    cmd: "curl -o {{ user_bin_path }}/kubectl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl"
+    creates: "{{ user_bin_path }}/kubectl"
+
+- name: Set kubectl permissions
+  file: 
+    path: "{{ user_bin_path }}/kubectl"
+    mode: u+x

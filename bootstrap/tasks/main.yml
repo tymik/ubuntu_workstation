@@ -11,6 +11,7 @@
 - include: commons.yml
 - include: docker.yml
 - include: tfswitch.yml
+# - include: kubernetes.yml
 - include: chrome.yml
 - include: anydesk.yml
 - include: teamviewer.yml
