@@ -4,13 +4,23 @@
 # In general instead of using this I prefer to use docker containers
 # with kubectl and helm and I advise you to do the same unless you
 # really need to install that.
+# kubectl: https://hub.docker.com/r/bitnami/kubectl/
+# helm: https://hub.docker.com/r/alpine/helm
 # and I did not test commands below, so they may work or may need some tuning
 - name: Install kubectl (shell method)
   shell:
     cmd: "curl -o {{ user_bin_path }}/kubectl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl"
     creates: "{{ user_bin_path }}/kubectl"
+  become: false
 
 - name: Set kubectl permissions
   file: 
     path: "{{ user_bin_path }}/kubectl"
     mode: u+x
+  become: false
+
+- name: Instal helm
+  shell:
+    cmd: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+    creates: /usr/local/bin/helm
+  become: false
