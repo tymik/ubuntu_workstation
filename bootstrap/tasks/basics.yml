@@ -1,5 +1,9 @@
 ---
 # This is a must have which I really, really need
+# some of packages below are basics requirements
+# listed before other stuff, like Docker - but they
+# are common for more things than just one, so are not put
+# separately in dedicated yamls.
 - name: Install all commonly used desktop packages from apt
   apt:
     name: 
@@ -8,6 +12,8 @@
       - apt-transport-https
       - lsb-release
       - gnupg
+      - gnupg-agent
+      - software-properties-common
       - dconf-cli
       - dconf-editor
       - git
