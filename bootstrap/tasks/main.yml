@@ -10,6 +10,7 @@
 - include: microsoft.yml
 - include: commons.yml
 - include: docker.yml
+- include: tfswitch.yml
 - include: chrome.yml
 - include: anydesk.yml
 - include: upgrades.yml

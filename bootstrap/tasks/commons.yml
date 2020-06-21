@@ -25,3 +25,10 @@
     cache_valid_time: 3600
     autoclean: yes
   become: true
+
+# You have to relogin for this to take effect because of how the 
+# default sourcing .profile works
+- name: Create ~/bin directory for user binaries - please re-login
+  file:
+    path: "{{ user_bin_path }}"
+    state: directory

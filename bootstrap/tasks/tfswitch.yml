@@ -1,0 +1,18 @@
+---
+# Tfswitch installatioin
+- name: tfswitch installation (shell method)
+  shell:
+    cmd: curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash
+    creates: /usr/local/bin/tfswitch
+  become: true
+
+- name: Terraform installation from tfswitch
+  shell:
+    cmd: "tfswitch --bin={{ tf_path }} 0.12.26"
+    creates: "{{ tf_path }}"
+  become: false
+
+# errors are ignored because if the completion already exist, it throws error
+- name: Terraform autocompletion
+  shell: "{{ tf_path }} -install-autocomplete"
+  ignore_errors: true
