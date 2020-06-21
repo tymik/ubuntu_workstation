@@ -19,18 +19,20 @@
 # * docker
 # * terraform + tfswitch
 # * kubectl
+# * teamviewer
+# * check packages that you might want to remove from basic ubuntu installation
+# * Google CLI
+
+# TODO2:
+# list here is an idea, but to be verified if this is needed at all
+# * add more ubuntu repos
 # * ffmpeg and other codecs
-# * flashplugin
-# * gksu - was not found in repo
-# * dotfiles (need own fork)
-# * mplayer
+# * vlc
 # * nautilus-admin                   
 # * nautilus-extension-brasero       
 # * nautilus-wipe
+# * flashplugin
+# * gksu - was not found in repo
+# * mplayer
 # * openjdk
-# * teamviewer
 # * virtualbox
-# * vlc (verify if needed)s
-# * check packages that you might want to remove from basic ubuntu installation
-# * Google CLI
-# * add more ubuntu repos
