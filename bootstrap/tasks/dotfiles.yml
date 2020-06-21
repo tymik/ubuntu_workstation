@@ -3,5 +3,5 @@
 - name: git clone dotfiles
   git:
     repo: ssh://{{ dotfiles_repo }}
-    dest: '{{ ansible_env.HOME }}/dotfiles'
+    dest: '{{ ansible_user_dir }}/dotfiles'
   become: false
