@@ -4,6 +4,7 @@
   apt:
     name: 
       - aptitude
+      - cifs-utils
       - hddtemp
       - gimp
       - lm-sensors
@@ -13,8 +14,11 @@
       - openssh-server
       - powertop
       - pwgen
+      - samba
       - secure-delete
       - smartmontools
+      - smb4k
+      - smbnetfs
       - synaptic
       - tshark
       - ubuntu-restricted-extras
