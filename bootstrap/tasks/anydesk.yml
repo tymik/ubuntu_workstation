@@ -4,7 +4,6 @@
     url: https://keys.anydesk.com/repos/DEB-GPG-KEY
     state: present
   become: true
-  ignore_errors: yes
 
 - name: "Add AnyDesk repo"
   apt_repository:
@@ -12,7 +11,6 @@
     state: present
     filename: 'anydesk'
   become: true
-  ignore_errors: yes
 
 - name: "Install AnyDesk"
   apt: 
@@ -20,5 +18,4 @@
     state: present 
     update_cache: yes
   become: true
-  ignore_errors: yes
 

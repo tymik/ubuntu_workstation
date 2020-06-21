@@ -5,7 +5,6 @@
     url: https://packages.microsoft.com/keys/microsoft.asc
     state: present
   become: true
-  ignore_errors: yes
 
 - name: "Add Teams Repo"
   apt_repository:
@@ -13,7 +12,6 @@
     state: present
     filename: 'ms-teams'
   become: true
-  ignore_errors: yes
 
 - name: "Add Azure CLI Repo"
   apt_repository:
@@ -21,7 +19,6 @@
     state: present
     filename: 'azure-cli'
   become: true
-  ignore_errors: yes
 
 - name: "Install Microsoft provided packages"
   apt: 
@@ -31,5 +28,4 @@
     state: present 
     update_cache: yes
   become: true
-  ignore_errors: yes
 

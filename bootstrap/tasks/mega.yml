@@ -5,7 +5,6 @@
     url: https://mega.nz/linux/MEGAsync/xUbuntu_20.04/Release.key
     state: present
   become: true
-  ignore_errors: yes
 
 - name: "Add Repo: MEGAsync"
   apt_repository:
@@ -13,7 +12,6 @@
     state: present
     filename: 'megasync'
   become: true
-  ignore_errors: yes
 
 - name: "Install megasync"
   apt: 
@@ -21,5 +19,4 @@
     state: present 
     update_cache: yes
   become: true
-  ignore_errors: yes
 
