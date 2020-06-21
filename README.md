@@ -13,6 +13,15 @@ Don't expect steam / playonlinux / lutris and/or others here soon.
 
 Staring / watching the project will motivate me to put more efforts into this playbook.
 
+:warning: WARNING :warning:
+-------
+
+:rotating_light: :rotating_light: :rotating_light: :rotating_light: :rotating_light:
+Ensure that you understand what is going on in this playbook.
+It contains potentially dangerous operations like forced firmware update or installation of tfswitch with the use of curled script piped to bash.
+There is no warranty that no malicious operations can happen in future in curled scripts piped to bash and updating firmware on low battery can damage your hardware (this is why you need to use --force to update firmware), so make sure you understand this warning, don't just run it blindly!
+:rotating_light: :rotating_light: :rotating_light: :rotating_light: :rotating_light:
+
 Credits
 -------
 
