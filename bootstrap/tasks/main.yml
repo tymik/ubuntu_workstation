@@ -13,13 +13,12 @@
 - include: tfswitch.yml
 - include: chrome.yml
 - include: anydesk.yml
+- include: teamviewer.yml
 - include: upgrades.yml
 - include: dotfiles.yml
 
 # TODO:
 # * awscli v2 - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
-# * docker
-# * terraform + tfswitch
 # * kubectl
 # * teamviewer
 # * check packages that you might want to remove from basic ubuntu installation
