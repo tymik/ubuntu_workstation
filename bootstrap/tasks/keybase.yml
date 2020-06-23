@@ -1,8 +1,8 @@
 ---
 - name: "Install keybase"
-  apt: 
+  apt:
     deb: https://prerelease.keybase.io/keybase_amd64.deb
-    state: present 
+    state: present
     update_cache: yes
     cache_valid_time: 3600
   become: true

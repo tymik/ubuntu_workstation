@@ -14,13 +14,13 @@
   become: true
 
 - name: "Install Docker packages"
-  apt: 
+  apt:
     name:
     - docker-ce
     - docker-ce-cli
     - docker-compose
     - containerd.io
-    state: present 
+    state: present
     update_cache: yes
   become: true
 

@@ -2,7 +2,7 @@
 # This is a must have which I really, really need
 - name: Install all commonly used desktop packages from apt
   apt:
-    name: 
+    name:
       - aptitude
       - cifs-utils
       - hddtemp
@@ -30,7 +30,7 @@
     autoclean: yes
   become: true
 
-# You have to relogin for this to take effect because of how the 
+# You have to relogin for this to take effect because of how the
 # default sourcing .profile works
 - name: Create ~/bin directory for user binaries - please re-login
   file:

@@ -13,9 +13,9 @@
   become: true
 
 - name: "Install AnyDesk"
-  apt: 
+  apt:
     name: anydesk
-    state: present 
+    state: present
     update_cache: yes
   become: true
 

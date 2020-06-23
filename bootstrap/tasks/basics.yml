@@ -6,7 +6,7 @@
 # separately in dedicated yamls.
 - name: Install all commonly used desktop packages from apt
   apt:
-    name: 
+    name:
       - ca-certificates
       - curl
       - apt-transport-https

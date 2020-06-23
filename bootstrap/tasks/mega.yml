@@ -14,9 +14,9 @@
   become: true
 
 - name: "Install megasync"
-  apt: 
+  apt:
     name: megasync
-    state: present 
+    state: present
     update_cache: yes
   become: true
 

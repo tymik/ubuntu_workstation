@@ -2,7 +2,7 @@
 # Additional ansible packages
 - name: Install all commonly used desktop packages from apt
   apt:
-    name: 
+    name:
       - ansible-doc
       - ansible-lint
     state: present

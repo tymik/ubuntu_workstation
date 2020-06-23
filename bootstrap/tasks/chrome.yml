@@ -1,8 +1,8 @@
 ---
 - name: "Install Chrome"
-  apt: 
+  apt:
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    state: present 
+    state: present
     update_cache: yes
     cache_valid_time: 3600
   become: true

@@ -21,11 +21,11 @@
   become: true
 
 - name: "Install Microsoft provided packages"
-  apt: 
+  apt:
     name:
     - azure-cli
     - teams
-    state: present 
+    state: present
     update_cache: yes
   become: true
 
