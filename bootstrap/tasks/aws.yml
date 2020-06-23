@@ -1,0 +1,30 @@
+---
+# awscli v2
+# 2020-06-21:
+# In general instead of using this it might be a better idea to use
+# docker container for awscli, yet i did not test it
+# awscli: https://hub.docker.com/r/amazon/aws-cli
+# and I did not test commands below, so they may work or may need some tuning
+- name: Download awscli v2 (shell method)
+  shell:
+    cmd: 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
+    creates: "{{ ansible_user_dir }}/awscliv2.zip"
+  become: false
+
+- name: Create ~/aws directory
+  file:
+    path: "{{ ansible_user_dir }}/aws"
+    state: directory
+  become: false
+
+- name: Extract awscliv2.zip to ~/aws
+  unarchive:
+    src: "{{ ansible_user_dir }}/awscliv2.zip"
+    dest: "{{ ansible_user_dir }}/aws"
+  become: false
+
+- name: Install awscli v2 (shell method)
+  shell:
+    cmd: "{{ ansible_user_dir }}/aws/install --bin-dir {{ user_bin_path }} --install-dir {{ ansible_user_dir }}/aws --update"
+    creates: "{{ ansible_user_dir }}/awscliv2.zip"
+  become: false
