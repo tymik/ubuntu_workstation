@@ -24,3 +24,19 @@
     update_cache: yes
   become: true
 
+- name: "Create docker group"
+  group:
+    name: docker
+    state: present
+  become: true
+
+- set_fact:
+    my_user: "{{ ansible_user }}"
+  become: false
+
+- name: "Add myself to docker group"
+  user:
+    name: "{{ my_user }}"
+    groups: docker
+    append: yes
+  become: true
