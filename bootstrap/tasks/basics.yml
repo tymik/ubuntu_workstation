@@ -19,6 +19,7 @@
       - git
       - keepassxc
       - python3-pip
+      - rename
       - screen
       - vim
       - whois
