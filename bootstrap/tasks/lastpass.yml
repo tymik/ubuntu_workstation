@@ -1,0 +1,27 @@
+---
+# Lastpass
+
+- name: Download lastpass
+  get_url:
+    url: https://download.cloud.lastpass.com/linux/lplinux.tar.bz2
+    dest: "{{ ansible_user_dir }}/lplinux.tar.bz2"
+    mode: '0550'
+
+- name: Create ~/lastpass directory
+  file:
+    path: "{{ ansible_user_dir }}/lastpass"
+    state: directory
+  become: false
+
+- name: Extract lplinux.tar.bz2 to ~/lastpass
+  unarchive:
+    src: "{{ ansible_user_dir }}/lplinux.tar.bz2"
+    dest: "{{ ansible_user_dir }}/lastpass"
+    remote_src: yes
+  become: false
+
+- name: Install lastpass (shell method)
+  shell:
+    chdir: "{{ ansible_user_dir }}/lastpass/"
+    cmd: "./install_lastpass.sh"
+  become: true
