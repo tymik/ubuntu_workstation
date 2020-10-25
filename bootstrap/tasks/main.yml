@@ -19,6 +19,8 @@
 - include: teamviewer.yml
 - include: upgrades.yml
 - include: dotfiles.yml
+- include: multimedia.yml
+- include: steam.yml
 
 # TODO:
 # * check packages that you might want to remove from basic ubuntu installation

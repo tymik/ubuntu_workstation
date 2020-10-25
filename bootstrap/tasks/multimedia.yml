@@ -1,0 +1,19 @@
+---
+# Additional ansible packages
+- name: Install multimedia packages
+  apt:
+    name:
+      - ubuntu-restricted-extras
+      - ansible-lint
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+    autoclean: yes
+  become: true
+
+- name: Install snap packages for multimedia
+  snap:
+    name:
+      - vlc
+    classic: no
+  become: true
