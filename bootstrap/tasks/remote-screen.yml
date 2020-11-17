@@ -1,0 +1,39 @@
+---
+# Install flaptak and needed package to cast your screen to remote tv
+# see article: https://askubuntu.com/questions/1017249/samsung-tv-mirror-screen
+- name: Install all commonly used desktop packages from apt
+  apt:
+    name:
+      - flatpak
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+    autoclean: yes
+  become: true
+
+# - name: Download Flatpak Gnome Network Displays
+#   get_url:
+#     url: https://flathub.org/apps/details/org.gnome.NetworkDisplays
+#     dest: "{{ ansible_user_dir }}/Download/org.gnome.NetworkDisplays.flatpakref"
+#     mode: '0550'
+
+# - name: Instal Flatpak Gnome Network Displays
+#   shell:
+#     cmd: |
+#       flatpak install org.gnome.NetworkDisplays.flatpakref
+#     creates: /usr/local/bin/helm
+#   become: false
+
+- name: Add the flathub flatpak repository remote to the user installation
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    method: user
+
+- name: Install the NetworkDisplays package from flathub
+  community.general.flatpak:
+    name: org.gnome.NetworkDisplays
+    state: present
+    method: user
+  become: false

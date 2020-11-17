@@ -21,6 +21,8 @@
 - include: dotfiles.yml
 - include: multimedia.yml
 - include: steam.yml
+- include: lutris.yml
+- include: remote-screen.yml
 
 # TODO:
 # * check packages that you might want to remove from basic ubuntu installation
