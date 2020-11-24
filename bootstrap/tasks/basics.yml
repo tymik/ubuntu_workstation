@@ -22,6 +22,7 @@
       - rename
       - screen
       - vim
+      - webp
       - whois
     state: present
     update_cache: yes
