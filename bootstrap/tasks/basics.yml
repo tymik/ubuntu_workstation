@@ -21,6 +21,7 @@
       - python3-pip
       - rename
       - screen
+      - traceroute
       - vim
       - webp
       - whois
