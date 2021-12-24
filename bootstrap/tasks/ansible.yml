@@ -3,7 +3,6 @@
 - name: Install all commonly used desktop packages from apt
   apt:
     name:
-      - ansible-doc
       - ansible-lint
     state: present
     update_cache: yes
