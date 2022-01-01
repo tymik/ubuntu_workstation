@@ -22,6 +22,7 @@
       - smb4k
       - smbnetfs
       - synaptic
+      - testdisk
       - tshark
       - ubuntu-restricted-extras
       - wipe
