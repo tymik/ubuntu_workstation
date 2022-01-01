@@ -1,0 +1,33 @@
+---
+# VBOX
+
+- name: Accept virtualbox-ext-pack seen license
+  debconf:
+    name: virtualbox-ext-pack
+    question: virtualbox-ext-pack/license
+    value: 'true'
+    vtype: seen
+  become: true
+
+- name: Accept virtualbox-ext-pack select license
+  debconf:
+    name: virtualbox-ext-pack
+    question: virtualbox-ext-pack/license
+    value: 'true'
+    vtype: select
+  become: true
+
+- name: "Install VBOX packages"
+  apt:
+    name:
+    - virtualbox
+    - virtualbox-dkms
+    - virtualbox-ext-pack
+    - virtualbox-guest-additions-iso
+    - virtualbox-guest-dkms-hwe
+    - virtualbox-guest-utils-hwe
+    - virtualbox-guest-x11-hwe
+    - virtualbox-qt
+    state: present
+    update_cache: yes
+  become: true

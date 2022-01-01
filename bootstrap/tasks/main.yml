@@ -19,6 +19,7 @@
 - include: teamviewer.yml
 - include: upgrades.yml
 - include: dotfiles.yml
+- include: vbox.yml
 - include: multimedia.yml
 - include: steam.yml
 - include: lutris.yml
@@ -33,8 +34,8 @@
 # * add more ubuntu repos
 # * ffmpeg and other codecs
 # * vlc
-# * nautilus-admin                  
-# * nautilus-extension-brasero      
+# * nautilus-admin
+# * nautilus-extension-brasero
 # * nautilus-wipe
 # * flashplugin
 # * gksu - was not found in repo
