@@ -1,4 +1,6 @@
 ---
+# TODO: add .history to global gitignore:
+# https://sebastiandedeyne.com/setting-up-a-global-gitignore-file/
 # Configuration of git
 - name: set global user.name for git
   git_config:
@@ -21,12 +23,12 @@
     value: "{{ git_editor }}"
   become: false
 
-- name: set global user.signingkey for git
-  git_config:
-    name: user.signingkey
-    scope: global
-    value: "{{ git_user_signkey }}"
-  become: false
+# - name: set global user.signingkey for git
+#   git_config:
+#     name: user.signingkey
+#     scope: global
+#     value: "{{ git_user_signkey }}"
+#   become: false
 
 - name: set global commit.pgpsign for git
   git_config:
@@ -34,4 +36,3 @@
     scope: global
     value: true
   become: false
-
